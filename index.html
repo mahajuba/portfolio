@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mahajuba's Portfolio</title>
+  <meta name="description" content="Mahajuba's portfolio gallery." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="top"></div>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-text">Mahajuba's Portfolio</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Mahajuba's Photography Gallery</p>
+        <h1 class="hero-title">Capturing moments and stories ❤︎⁠</h1>
+        <p class="hero-subtitle">
+          A curated collection of photographs captured by me.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">View Gallery</a>
+        </div>
+      </div>
+      <div class="hero-accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-header">
+        <h2>Selected Work</h2>
+        <p>Use the filters to explore different styles.</p>
+      </div>
+
+      <div class="toolbar" role="toolbar" aria-label="Gallery filters">
+        <button class="chip is-active" data-filter="all" type="button">All</button>
+        <button class="chip" data-filter="Nature" type="button">Nature</button>
+        <button class="chip" data-filter="Floral" type="button">Floral</button>
+        <button class="chip" data-filter="Wildlife" type="button">Wildlife</button>
+        <button class="chip" data-filter="Architecture" type="button">Architecture</button>
+
+        <div class="toolbar-spacer"></div>
+
+        <label class="search">
+          <span class="sr-only">Search photos</span>
+          <input id="searchInput" type="search" placeholder="Search (e.g., 'sunset')" autocomplete="off" />
+        </label>
+      </div>
+
+      <div class="grid" id="gallery" aria-live="polite"></div>
+
+      <p class="muted" id="resultsNote" aria-live="polite"></p>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-header">
+        <h2>About me</h2>
+      </div>
+
+      <div class="about">
+        <div class="about-card">
+          <h3>Hello I'm Mahajuba!</h3>
+          <p>
+            I have always had a strong passion for photography. At present, I primarily capture images using my iPhone;
+            however, I aspire to purchase a professional camera in the future to further develop my skills and expand my
+            creative scope.
+          </p>
+          <p>Experience:</p>
+          <ul class="about-list">
+            <li>Head of Press at a high school Model United Nations (MUN) event.</li>
+            <li>Vice Chair of the Social Media Team of the Crafty Corner Club at Qatar University.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Mahajuba Rahman. All rights reserved.</p>
+    <a href="#top" class="back-to-top">Back to top ↑</a>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <div class="lightbox-inner" role="document">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close viewer">✕</button>
+
+      <figure class="lightbox-figure">
+        <img id="lightboxImg" alt="" />
+        <figcaption>
+          <div class="lightbox-title" id="lightboxTitle"></div>
+          <div class="lightbox-meta" id="lightboxMeta"></div>
+        </figcaption>
+      </figure>
+
+      <div class="lightbox-controls">
+        <button class="btn btn-ghost" id="prevBtn" type="button" aria-label="Previous image">← Prev</button>
+        <button class="btn btn-ghost" id="nextBtn" type="button" aria-label="Next image">Next →</button>
+      </div>
+    </div>
+    <div class="lightbox-backdrop" id="lightboxBackdrop" aria-hidden="true"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
